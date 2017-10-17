@@ -17,7 +17,6 @@
 @property (strong,nonatomic) NSArray *gameFrequency;
 @property (strong, nonatomic) GameHelper *gh;
 
-@property (weak, nonatomic) IBOutlet UILabel *lblYourNumbers;
 @property (weak, nonatomic) IBOutlet UILabel *lblResult;
 @property (strong, nonatomic) NSMutableArray* arr;
 
@@ -56,7 +55,7 @@
     //hide all buttons
     
     [self HideButtons];
-    
+    self.lblResult.hidden = true;
     //
 }
 
@@ -85,6 +84,7 @@
     [self HideButtons];
     [self HideResultButtons];
      self.btnPlay.hidden = YES;
+    self.lblResult.hidden = YES;
 }
 
 ///btnquick Pick button
@@ -92,7 +92,7 @@
     NSInteger row = [self.pickerDaily selectedRowInComponent:0];
     NSString *selectedGame = [self.gameNames objectAtIndex:row ];
     self.arr = [self.gh generateNumber:selectedGame];
-    
+    self.lblResult.hidden = true;
     for(int i = 0 ; i < self.arr.count ; i ++){
         switch (i) {
             case 0:
@@ -127,6 +127,7 @@
 }
 
 - (IBAction)btnWinningNumbers:(id)sender {
+    [self HideResultButtons];
     
     NSInteger row = [self.pickerDaily selectedRowInComponent:0];
     NSString *selectedGame = [self.gameNames objectAtIndex:row ];
@@ -186,12 +187,19 @@
             default:
                 break;
         }
+        self.lblResult.hidden = false;
     }
     
     NSMutableString* message = [[NSMutableString alloc]init];
     [message appendString:@"You have guessed "];
     [message appendString:[NSString stringWithFormat:@"%i",count] ];
     [message appendString:@" numbers"] ;
+    
+    if(count == arrResult.count)
+    {
+        [message appendString:@" \n"] ;
+        [message appendString:@" !!!YOU ARE A WINNER!!!"] ;
+    }
     _lblResult.text = message;
 }
 
