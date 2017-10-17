@@ -63,6 +63,7 @@
     
     [self HideButtons];
     self.lblResult.hidden = true;
+    [self.lblResult setTextAlignment:NSTextAlignmentCenter];
     //
 }
 
@@ -130,7 +131,7 @@
     
     self.btnPlay.hidden = false;
     [self HideResultButtons];
-    [self.lblResult setTextAlignment:NSTextAlignmentCenter];
+    
     
     
 }
