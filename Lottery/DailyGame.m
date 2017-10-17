@@ -130,6 +130,8 @@
     
     self.btnPlay.hidden = false;
     [self HideResultButtons];
+    [self.lblResult setTextAlignment:NSTextAlignmentCenter];
+    
     
 }
 
@@ -262,14 +264,14 @@
     
     if(row2 == 2)
     {
-         [message appendString:@" \n in first game"] ;
-        [message appendString:@" \n and "] ;
+         [message appendString:@" \n in FIRST GAME"] ;
+        [message appendString:@" and "] ;
         [message appendString:[NSString stringWithFormat:@"%i",count2] ];
-        [message appendString:@" in second game "] ;
+        [message appendString:@" in SECOND GAME "] ;
     }
-    if(count == arrResult.count)
+    if(count == arrResult.count || count2 == arrResult.count)
     {
-        [message appendString:@" \n"] ;
+        [message appendString:@" \n \n"] ;
         [message appendString:@" !!!YOU ARE A WINNER!!!"] ;
     }
     _lblResult.text = message;
