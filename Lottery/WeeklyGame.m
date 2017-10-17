@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnNumber3;
 @property (weak, nonatomic) IBOutlet UIButton *btnNumber4;
 @property (weak, nonatomic) IBOutlet UIButton *btnNumber5;
+@property (weak, nonatomic) IBOutlet UIButton *btnNumber6;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *btnResult1;
@@ -31,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnResult3;
 @property (weak, nonatomic) IBOutlet UIButton *btnResult4;
 @property (weak, nonatomic) IBOutlet UIButton *btnResult5;
+@property (weak, nonatomic) IBOutlet UIButton *btnResult6;
 
 @end
 
@@ -110,6 +112,10 @@
                 [self.btnNumber5 setTitle:self.arr[i] forState:UIControlStateNormal];
                 self.btnNumber5.hidden = false;
                 break;
+            case 5:
+                [self.btnNumber6 setTitle:self.arr[i] forState:UIControlStateNormal];
+                self.btnNumber6.hidden = false;
+                break;
                 
             default:
                 break;
@@ -178,6 +184,14 @@
                     count++;
                 }
                 break;
+            case 5:
+                [self.btnResult6 setTitle:arrResult[i] forState:UIControlStateNormal];
+                self.btnResult6.hidden = false;
+                if(guessed){
+                    self.btnResult6.backgroundColor = Color ;
+                    count++;
+                }
+                break;
                 
             default:
                 break;
@@ -212,7 +226,8 @@
     [self.btnNumber4 setTitle:@"" forState:UIControlStateNormal];
     self.btnNumber5.hidden = YES;
     [self.btnNumber5 setTitle:@"" forState:UIControlStateNormal];
-    
+    self.btnNumber6.hidden = YES;
+    [self.btnNumber6 setTitle:@"" forState:UIControlStateNormal];
     self.btnPlay.hidden = YES;
     
     
@@ -235,6 +250,9 @@
     self.btnResult5.hidden = YES;
     [self.btnResult5 setTitle:@"" forState:UIControlStateNormal];
     self.btnResult5.backgroundColor = [UIColor lightGrayColor];
+    self.btnResult6.hidden = YES;
+    [self.btnResult6 setTitle:@"" forState:UIControlStateNormal];
+    self.btnResult6.backgroundColor = [UIColor lightGrayColor];
     
 }
 

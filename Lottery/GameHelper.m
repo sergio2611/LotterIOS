@@ -21,7 +21,7 @@
     LotteryGame* pick5 =     [[LotteryGame alloc]InitwithName:@"Pick 5" withAmountDigits:5 withGameType:0 withMinRage:0 withMaxRage:9];
     LotteryGame* fantasy5 = [[LotteryGame alloc]InitwithName:@"Fantasy 5" withAmountDigits:5 withGameType:0 withMinRage:1 withMaxRage:36];
     
-    LotteryGame* luckyMoney = [[LotteryGame alloc]InitwithName:@"Lucky Money" withAmountDigits:5 withGameType:1 withMinRage:1 withMaxRage:47 withHasMagicNumber:YES withMagicNumberMax:17];
+    LotteryGame* luckyMoney = [[LotteryGame alloc]InitwithName:@"Lucky Money" withAmountDigits:4 withGameType:1 withMinRage:1 withMaxRage:47 withHasMagicNumber:YES withMagicNumberMax:17];
     LotteryGame* powerBall = [[LotteryGame alloc]InitwithName:@"PowerBall" withAmountDigits:5 withGameType:1 withMinRage:1 withMaxRage:69 withHasMagicNumber:YES withMagicNumberMax:26];
     LotteryGame* floridaLotto = [[LotteryGame alloc]InitwithName:@"Florida Lotto" withAmountDigits:5 withGameType:1 withMinRage:1 withMaxRage:53];
     

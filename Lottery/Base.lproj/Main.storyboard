@@ -35,7 +35,7 @@
                                 <rect key="frame" x="27" y="88" width="320" height="216"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="hyf-lB-0EL">
-                                <rect key="frame" x="71" y="368.5" width="232" height="48"/>
+                                <rect key="frame" x="46.5" y="368.5" width="281" height="48"/>
                                 <subviews>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWq-lG-9iP">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="48"/>
@@ -67,6 +67,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="23"/>
                                     </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-X3-NA9">
+                                        <rect key="frame" x="245" y="0.0" width="36" height="48"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="23"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -83,7 +89,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="WlP-CW-5uc">
-                                <rect key="frame" x="71.5" y="490.5" width="232" height="48"/>
+                                <rect key="frame" x="47" y="490.5" width="281" height="48"/>
                                 <subviews>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-9D-p2B">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="48"/>
@@ -111,6 +117,12 @@
                                     </button>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yy-42-jkm">
                                         <rect key="frame" x="196" y="0.0" width="36" height="48"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="23"/>
+                                    </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSN-sQ-sX4">
+                                        <rect key="frame" x="245" y="0.0" width="36" height="48"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="23"/>
@@ -151,12 +163,14 @@
                         <outlet property="btnNumber3" destination="1yC-eE-F88" id="sSB-lf-Fjr"/>
                         <outlet property="btnNumber4" destination="kcF-9t-z4X" id="ALg-Jg-BmG"/>
                         <outlet property="btnNumber5" destination="u1b-Zd-Lp4" id="q3P-u1-zR7"/>
+                        <outlet property="btnNumber6" destination="9fN-X3-NA9" id="8Na-qf-rGy"/>
                         <outlet property="btnPlay" destination="r5f-CP-DCa" id="szC-oP-4V1"/>
                         <outlet property="btnResult1" destination="n9f-9D-p2B" id="Sdp-7c-8wy"/>
                         <outlet property="btnResult2" destination="DY6-sC-fKp" id="zcx-lN-hcy"/>
                         <outlet property="btnResult3" destination="z1t-QD-7kr" id="fSx-QE-IZ7"/>
                         <outlet property="btnResult4" destination="cW8-68-bQo" id="RjY-9J-31T"/>
                         <outlet property="btnResult5" destination="7Yy-42-jkm" id="Aqf-ey-kOp"/>
+                        <outlet property="btnResult6" destination="oSN-sQ-sX4" id="1TT-e4-cgS"/>
                         <outlet property="lblResult" destination="tCY-ZC-9si" id="T9u-H1-6Zi"/>
                         <outlet property="pickerWeekly" destination="aIo-H7-Kfy" id="VOd-73-iwi"/>
                     </connections>
