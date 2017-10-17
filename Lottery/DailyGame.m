@@ -37,6 +37,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnResult4;
 @property (weak, nonatomic) IBOutlet UIButton *btnResult5;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnResult11;
+@property (weak, nonatomic) IBOutlet UIButton *btnResult22;
+@property (weak, nonatomic) IBOutlet UIButton *btnResult33;
+@property (weak, nonatomic) IBOutlet UIButton *btnResult44;
+@property (weak, nonatomic) IBOutlet UIButton *btnResult55;
+
+
 //
 @end
 
@@ -130,13 +137,20 @@
     [self HideResultButtons];
     
     NSInteger row = [self.pickerDaily selectedRowInComponent:0];
+    //get if they select play with both
+    NSInteger row2 = [self.pickerDaily selectedRowInComponent:1];
+    
     NSString *selectedGame = [self.gameNames objectAtIndex:row ];
     
     UIColor *Color = [UIColor redColor];
     NSMutableArray* arrResult = [[NSMutableArray alloc] init];
+    NSMutableArray* arrResult2 = [[NSMutableArray alloc] init];
     arrResult = [self.gh generateNumber:selectedGame];
+    arrResult2 = [self.gh generateNumber:selectedGame];
     Boolean guessed = false;
     int count = 0;
+    int count2 = 0;
+    Boolean guessed2 = false;
     for(int i = 0; i < arrResult.count ; i ++)
     {
         NSString* a = arrResult[i];
@@ -150,6 +164,16 @@
                     self.btnResult1.backgroundColor = Color ;
                     count++;
                 }
+                if(row2 ==2) //play with both
+                {
+                    guessed2 = [self searchInArray:[arrResult2[i] integerValue] :self.arr];
+                    [self.btnResult11 setTitle:arrResult2[i] forState:UIControlStateNormal];
+                    self.btnResult11.hidden = false;
+                    if(guessed2){
+                        self.btnResult11.backgroundColor = Color ;
+                        count2++;
+                    }
+                }
                 break;
             case 1:
                 [self.btnResult2 setTitle:arrResult[i] forState:UIControlStateNormal];
@@ -157,6 +181,16 @@
                 if(guessed){
                     self.btnResult2.backgroundColor = Color ;
                     count++;
+                }
+                if(row2 ==2) //play with both
+                {
+                    guessed2 = [self searchInArray:[arrResult2[i] integerValue] :self.arr];
+                    [self.btnResult22 setTitle:arrResult2[i] forState:UIControlStateNormal];
+                    self.btnResult22.hidden = false;
+                    if(guessed2){
+                        self.btnResult22.backgroundColor = Color ;
+                        count2++;
+                    }
                 }
                 break;
             case 2:
@@ -166,6 +200,16 @@
                     self.btnResult3.backgroundColor = Color ;
                     count++;
                 }
+                if(row2 ==2) //play with both
+                {
+                    guessed2 = [self searchInArray:[arrResult2[i] integerValue] :self.arr];
+                    [self.btnResult33 setTitle:arrResult2[i] forState:UIControlStateNormal];
+                    self.btnResult33.hidden = false;
+                    if(guessed2){
+                        self.btnResult33.backgroundColor = Color ;
+                        count2++;
+                    }
+                }
                 break;
             case 3:
                 [self.btnResult4 setTitle:arrResult[i] forState:UIControlStateNormal];
@@ -173,6 +217,16 @@
                 if(guessed){
                     self.btnResult4.backgroundColor = Color;
                     count++;
+                }
+                if(row2 ==2) //play with both
+                {
+                    guessed2 = [self searchInArray:[arrResult2[i] integerValue] :self.arr];
+                    [self.btnResult44 setTitle:arrResult2[i] forState:UIControlStateNormal];
+                    self.btnResult44.hidden = false;
+                    if(guessed2){
+                        self.btnResult44.backgroundColor = Color ;
+                        count2++;
+                    }
                 }
                 break;
             case 4:
@@ -182,11 +236,22 @@
                     self.btnResult5.backgroundColor = Color ;
                     count++;
                 }
+                if(row2 ==2) //play with both
+                {
+                    guessed2 = [self searchInArray:[arrResult2[i] integerValue] :self.arr];
+                    [self.btnResult55 setTitle:arrResult2[i] forState:UIControlStateNormal];
+                    self.btnResult55.hidden = false;
+                    if(guessed2){
+                        self.btnResult55.backgroundColor = Color ;
+                        count2++;
+                    }
+                }
                 break;
                 
             default:
                 break;
         }
+        
         self.lblResult.hidden = false;
     }
     
@@ -195,6 +260,13 @@
     [message appendString:[NSString stringWithFormat:@"%i",count] ];
     [message appendString:@" numbers"] ;
     
+    if(row2 == 2)
+    {
+         [message appendString:@" \n in first game"] ;
+        [message appendString:@" \n and "] ;
+        [message appendString:[NSString stringWithFormat:@"%i",count2] ];
+        [message appendString:@" in second game "] ;
+    }
     if(count == arrResult.count)
     {
         [message appendString:@" \n"] ;
@@ -216,6 +288,8 @@
      [self.btnNumber4 setTitle:@"" forState:UIControlStateNormal];
     self.btnNumber5.hidden = YES;
      [self.btnNumber5 setTitle:@"" forState:UIControlStateNormal];
+    
+    
     
     self.btnPlay.hidden = YES;
     
@@ -239,6 +313,23 @@
     self.btnResult5.hidden = YES;
     [self.btnResult5 setTitle:@"" forState:UIControlStateNormal];
     self.btnResult5.backgroundColor = [UIColor lightGrayColor] ;
+    
+    //other result if they play other game
+    self.btnResult11.hidden = YES;
+    [self.btnResult11 setTitle:@"" forState:UIControlStateNormal];
+    self.btnResult11.backgroundColor = [UIColor lightGrayColor] ;
+    self.btnResult22.hidden = YES;
+    [self.btnResult22 setTitle:@"" forState:UIControlStateNormal];
+    self.btnResult22.backgroundColor = [UIColor lightGrayColor] ;
+    self.btnResult33.hidden = YES;
+    [self.btnResult33 setTitle:@"" forState:UIControlStateNormal];
+    self.btnResult33.backgroundColor = [UIColor lightGrayColor] ;
+    self.btnResult44.hidden = YES;
+    [self.btnResult44 setTitle:@"" forState:UIControlStateNormal];
+    self.btnResult44.backgroundColor = [UIColor lightGrayColor] ;
+    self.btnResult55.hidden = YES;
+    [self.btnResult55 setTitle:@"" forState:UIControlStateNormal];
+    self.btnResult55.backgroundColor = [UIColor lightGrayColor] ;
     
     
 }

@@ -228,6 +228,11 @@
     [self.btnNumber5 setTitle:@"" forState:UIControlStateNormal];
     self.btnNumber6.hidden = YES;
     [self.btnNumber6 setTitle:@"" forState:UIControlStateNormal];
+    
+    
+    
+    
+
     self.btnPlay.hidden = YES;
     
     
