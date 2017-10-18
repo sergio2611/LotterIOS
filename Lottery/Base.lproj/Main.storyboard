@@ -201,7 +201,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EgW-mu-XL3"/>
                     </view>
+<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" title="Weekly" image="calendaricon" selectedImage="calendaricon" id="ubr-wk-7K6"/>
+=======
+                    <tabBarItem key="tabBarItem" title="Weekly" id="ubr-wk-7K6"/>
+>>>>>>> parent of 43b6f71... Final Product
                     <connections>
                         <outlet property="btnNumber1" destination="LWq-lG-9iP" id="hB8-jm-Zya"/>
                         <outlet property="btnNumber2" destination="nXD-Uf-6XD" id="Kr1-UM-ZEg"/>
@@ -413,7 +417,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mm1-9G-15d"/>
                     </view>
+<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" title="Daily" image="clockicon" selectedImage="clockicon" id="VyW-MB-dQJ"/>
+=======
+                    <tabBarItem key="tabBarItem" title="Daily" id="VyW-MB-dQJ"/>
+>>>>>>> parent of 43b6f71... Final Product
                     <connections>
                         <outlet property="btnNumber1" destination="N9v-mT-uGM" id="cgH-fr-h9V"/>
                         <outlet property="btnNumber2" destination="PXI-id-Kww" id="4IL-H8-yjw"/>
@@ -460,8 +468,11 @@
             <point key="canvasLocation" x="-449" y="99"/>
         </scene>
     </scenes>
+<<<<<<< HEAD
     <resources>
         <image name="calendaricon" width="24" height="24"/>
         <image name="clockicon" width="24" height="24"/>
     </resources>
+=======
+>>>>>>> parent of 43b6f71... Final Product
 </document>
