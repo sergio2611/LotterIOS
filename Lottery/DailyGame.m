@@ -272,7 +272,7 @@
     }
     if(count == arrResult.count || count2 == arrResult.count)
     {
-        [message appendString:@" \n \n"] ;
+        [message appendString:@" \n"] ;
         [message appendString:@" !!!YOU ARE A WINNER!!!"] ;
     }
     _lblResult.text = message;
